@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div>
       <nav>
-        <img src={Logo} alt="Logo" />
+        <img className="logo"src={Logo} alt="Logo" />
       </nav>
     </div>
   );
