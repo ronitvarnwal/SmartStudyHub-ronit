@@ -1,7 +1,14 @@
 nav{
-  background-color: #000;
-  height: 70x;
+  background-color: #00ff00;
+  height: 80px;
+  display: flex;
 }
 .logo{
+  height: 60px;
+  margin-top: 10px;
+}
+.menuicon{
   height: 40px;
+  margin-top: 20px;
+  margin-left: 15px;
 }
