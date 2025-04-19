@@ -1,9 +1,13 @@
-import './App.css'
+import React from 'react';
+import Navbar from '../Components/Navbar';
 
-export default function App() {
+const App = () => {
   return (
-    <main>
-      React ⚛️ + Vite ⚡ + Replit
-    </main>
-  )
-}
+    <div>
+      <Navbar />
+      hii, im ronit
+    </div>
+  );
+};
+
+export default App;
