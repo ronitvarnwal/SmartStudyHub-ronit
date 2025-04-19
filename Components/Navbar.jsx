@@ -8,11 +8,9 @@ const App = () => {
   return (
     <div>
       <nav>
-         <img className="logo"src={MenuIcon} alt="MenuIcon" />
-
-        <img className="logo"src={LogoIcon} alt="Logo" />
-                 <img className="textlogo"src={TextLogo} alt="TextLogo" />
-        
+         <img className="menuicon" src={MenuIcon} alt="MenuIcon" />
+         <img className="logo" src={LogoIcon} alt="Logo" />
+         <img className="textlogo" src={TextLogo} alt="TextLogo" />
       </nav>
     </div>
   );
