@@ -7,10 +7,10 @@ import TextLogo from '../textlogo.svg'
 const App = () => {
   return (
     <div>
-      <nav>
-         <img className="menuicon" src={MenuIcon} alt="MenuIcon" />
+     <nav>
          <img className="logo" src={LogoIcon} alt="Logo" />
          <img className="textlogo" src={TextLogo} alt="TextLogo" />
+       <img className="menuicon"src={MenuIcon} alt="MenuIcon" />
       </nav>
     </div>
   );
