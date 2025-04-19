@@ -1,11 +1,11 @@
 nav{
   background-color: #00ff00;
   height: 80px;
-  display: flex;
+
 }
 .logo{
   height: 50px;
-  margin-top: 15px;
+  margin-top: -400px;
 }
 .menuicon{
   height: 36px;
