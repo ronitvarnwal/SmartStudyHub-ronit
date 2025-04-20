@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 
@@ -17,17 +18,20 @@ const Navbar = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-      <img className="logo" src={LogoIcon} alt="Logo" />
-      <img className="textlogo" src={TextLogo} alt="TextLogo" />
-      <img className="searchicon" src={SearchIcon} alt="SearchIcon" />
-      <img className="nighticon" src={NightIcon} alt="Night Mode Icon" />
-      <img className="menuicon" src={MenuIcon} alt="MenuIcon" />
+      <div className="logo-group">
+        <img className="logo" src={LogoIcon} alt="Logo" />
+        <img className="textlogo" src={TextLogo} alt="TextLogo" />
+      </div>
+      <div className="icon-group">
+        <img className="searchicon" src={SearchIcon} alt="Search" />
+        <img className="nighticon" src={NightIcon} alt="Night Mode" />
+        <img className="menuicon" src={MenuIcon} alt="Menu" />
+      </div>
     </nav>
   );
 };
