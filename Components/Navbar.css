@@ -1,19 +1,44 @@
-nav{
-  background-color: #00ff00;
+.navbar{
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #ffffff;
   height: 80px;
-
+  display: flex;
+  border-bottom: 1.7px solid #e0e0e0;
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.navbar.scrolled {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 .logo{
   height: 50px;
-  margin-top: -400px;
+  margin-top: 15px;
+  margin-left: 5px;
+  
 }
 .menuicon{
   height: 36px;
   margin-top: 22px;
   float: right;
+  filter: brightness(0) saturate(100%) invert(12%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(90%) contrast(90%);
 }
 .textlogo{
   height: 100px;
   margin-top: -15px;
   margin-left: -20px;
+  filter: brightness(0) saturate(100%) invert(12%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(90%) contrast(90%);
 }
+.searchicon{
+  height: 36px;
+  margin-top: 22px;
+  margin-right: 10px;
+  margin-left: 95px;
+  filter: brightness(0) saturate(100%) invert(12%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(90%) contrast(90%);
+}
+.nighticon{
+  height: 34px;
+  margin-top: 21px;
+  margin-right: 10px;
+  filter: brightness(0) saturate(100%) invert(12%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(90%) contrast(90%);
+  }
