@@ -24,9 +24,11 @@
 
 .logo {
   height: 50px;
+  margin-left: -10px;
 }
 
 .textlogo {
+  margin-top: -5px;
   height: 100px;
   margin-left: -20px;
   filter: brightness(0) saturate(100%) invert(12%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(90%) contrast(90%);
