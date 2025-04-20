@@ -9,6 +9,8 @@ const Home = () => {
         <p className="intro-desp">
           Discover proven strategies to enhance your learning experience, boost productivity, and achieve academic excellence with our expert tips and guidance.
         </p>
+        <button className="intro-button">Read Latest Articles</button>
+        <button className="intro-button">Explore Topics</button>
       </div>
     </div>
   );
