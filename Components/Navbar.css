@@ -4,17 +4,45 @@
   top: 0;
   z-index: 999;
   background-color: #ffffff;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  border-bottom: 1.7px solid #e0e0e0;
   transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  border-bottom: 1.7px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
 }
 
 .navbar.scrolled {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-top {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar.menu-open {
+  height: auto;
+}
+
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+.menu-content div {
+  font-size: 18px;
+  cursor: pointer;
+  padding: 6px 0;
+  transition: color 0.2s ease;
+}
+
+.menu-content div:hover {
+  color: #f15a25;
 }
 
 .logo-group {
@@ -41,7 +69,6 @@
 }
 
 .searchicon,
-.nighticon,
 .menuicon {
   height: 36px;
   filter: brightness(0) saturate(100%) invert(12%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(90%) contrast(90%);

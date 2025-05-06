@@ -23,7 +23,7 @@
 .button-group {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 25px;
   margin-left: 15px;
   margin-top: 30px;
 }
@@ -40,4 +40,108 @@
   font-weight: 600;
   transition: background-color 0.3s ease;
   width: fit-content;
+}
+.latest-articles{
+  background-color: #f9fafc;
+  height: auto;
+  max-height: 700px;
+  
+}
+.latest-articles-heading{
+  font-family: 'montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  font-weight: bold;
+  padding-top: 50px;
+  padding-left: 15px;
+}
+.right-arrow{
+  width: 20px;
+  margin-bottom: -5px;
+}
+.blogpage-link{
+  color: #F15A25;
+  text-decoration: none;
+  font-family: 'poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding-left: 15px;
+  padding-top: 25px;
+  width: 200px;
+}
+.topics-container{
+  background-color: #E5E5E5;
+  height: auto;
+}
+.topics-heading{
+  font-family: 'montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  font-weight: bold;
+  padding-top: 50px;
+  padding-left: 15px;
+  border-bottom: 5px solid #f15a25;
+  border-bottom-right-radius: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  
+  display: inline-block;
+  
+}
+.topic{
+  width: 450px;
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
+  border: 1px solid #e5e5e5;
+  box-shadow: rgb(138, 138, 138, 0.1) 0px 10px 50px;
+  flex: 1 1 400px; /* grow, shrink, base size */
+  max-width: 500px;
+  min-width: 200px;
+  background: #f5f5f5;
+  padding: 16px;
+  border: 1px solid #ccc;
+  box-sizing: border-box
+}
+.book-icon{
+  width: 50px;
+  padding-top: 20px;
+  display: block;
+  margin: 0 auto;
+}
+.topic h1{
+  font-family: 'montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  
+}
+.topic p{
+  font-family: 'poppins', sans-serif;
+  font-weight: 450;
+  font-size: 1rem;
+  margin-top: 15px;
+  color: #6e6e6e;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.topic div{
+  height: 1px;
+  background-color: #e5e5e5;
+}
+.last-topic-space{
+  height: 80px;
+}
+.topic-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* spacing between cards */
+  justify-content: center; /* or space-between, flex-start */
+  padding: 16px;
 }

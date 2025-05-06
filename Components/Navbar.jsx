@@ -1,12 +1,12 @@
 
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 import LogoIcon from '../logo.svg';
 import MenuIcon from '../menu.svg';
 import TextLogo from '../textlogo.svg';
 import SearchIcon from '../searchicon.svg';
-import NightIcon from '../night-icon.svg';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -21,18 +21,35 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsMenuOpen(prev => !prev)
+  }
+
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-      <div className="logo-group">
-        <img className="logo" src={LogoIcon} alt="Logo" />
-        <img className="textlogo" src={TextLogo} alt="TextLogo" />
-      </div>
-      <div className="icon-group">
-        <img className="searchicon" src={SearchIcon} alt="Search" />
-        <img className="nighticon" src={NightIcon} alt="Night Mode" />
-        <img className="menuicon" src={MenuIcon} alt="Menu" />
-      </div>
-    </nav>
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''} ${isMenuOpen ? 'menu-open': ''}`}>
+  <div className="navbar-top">
+    <Link to="/" style={{ cursor: 'default' }}>
+    <div className={`logo-group ${isMenuOpen ? 'logo-edit' : ''}`}>
+      <img className="logo" src={LogoIcon} alt="Logo" />
+      <img className="textlogo" src={TextLogo} alt="TextLogo" />
+    </div>
+    </Link>
+    <div className={`icon-group ${isMenuOpen ? 'icon-edit' : ''}`}>
+      <Link to="/search">
+      <img className="searchicon" src={SearchIcon} alt="Search" /></Link>
+      <img className="menuicon" src={MenuIcon} alt="Menu" onClick={toggleMenu} />
+    </div>
+  </div>
+  {isMenuOpen &&(
+    <div className="menu-content">
+      <Link to="/" style={{textDecoration: 'none', color: '#525252'}}><div>Home</div></Link>
+      <Link to="/" style={{textDecoration: 'none', color: '#525252'}}><div>About</div></Link>
+      <Link to="/blog" style={{textDecoration: 'none', color: '#525252'}}><div>Articles</div></Link>
+      <Link to="/blog" style={{textDecoration: 'none', color: '#525252'}}><div>Topics</div></Link>
+    </div>
+  )}
+</nav>
   );
 };
 
