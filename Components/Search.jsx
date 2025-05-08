@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { blogs } from './BlogData.jsx';
 import './FeaturedBlog.css';
 import './Search.css';
@@ -25,6 +25,10 @@ const Search = () => {
         blog.title.toLowerCase().includes(debouncedSearch.toLowerCase())
       )
     ;
+  const navigate = useNavigate();
+  const handleCancel = () => {
+    window.history.length > 2 ? navigate(-1) : navigate('/', {replace: true})
+  }
 
   return (
     <div>
@@ -37,9 +41,7 @@ const Search = () => {
           type="search"
           className="input"
         />
-        <Link to="/" style={{textDecoration: 'none', color: '#525252'}}>
-          <div className="cancel-btn">Cancel</div>
-        </Link>
+          <div onClick={handleCancel} className="cancel-btn">Cancel</div>
       </div>
       {/* {!searchValue && (
         <div className="no-results">
@@ -75,7 +77,7 @@ const Search = () => {
 </h1>
           <p className="featured-blog-date">{blog.date}</p>
           <p className="featured-blog-description">{blog.description}</p>
-          <p className="read-more-button">Read more</p>
+          <Link style={{cursor: 'none'}} to={`/blog/${blog.id}`}><p className="read-more-button">Read more</p></Link>
         </div>
       ))}
     </div>

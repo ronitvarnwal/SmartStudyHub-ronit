@@ -41,7 +41,7 @@ const Footer = () => {
           <li>Privacy Policy</li>
           <li>Accessibility</li>
         </ul>
-      </div>
+        </div>
       </div>
     </div>
   );

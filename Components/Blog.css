@@ -1,3 +1,9 @@
+* {
+  transition: all 0.08s ease-in-out;
+}
+main{
+  min-height: 90vh;
+}
 .topic-buttons {
   display: flex;
   align-items: center; /* fixed typo */
@@ -15,7 +21,7 @@
   color: #525252;
   font-weight: 500;
   border-radius: 30px;
-  font-size: clamp(1px, 2.5vw, 18px);
+  font-size: clamp(1px, 2vw, 20px);
   font-family: 'poppins', sans-serif;
   padding: 8px;
   display: flex;

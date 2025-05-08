@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 
 import Navbar from './Navbar.jsx';
+import Footer from './Footer.jsx';
 import { blogs } from './BlogData.jsx';
 import './FeaturedBlog.css'
 import './Blog.css';
 
 const Blog = () => {
-  const [activeTopic, setActiveTopic] = useState(null);
+  const [activeTopic, setActiveTopic] = useState("all");
 
   const topics = [
+    { id: "all", label: "All" },
     { id: "study", label: "Study Techniques" },
     { id: "time", label: "Time Management" },
     { id: "note", label: "Note-Taking" },
@@ -17,11 +20,12 @@ const Blog = () => {
   return (
     <div>
       <Navbar />
+      <main>
       <div className="topic-buttons">
         {topics.map((topic) => (
       <div
         key={topic.id}
-        onClick={() =>setActiveTopic(activeTopic === topic.id ? null : topic.id)}
+        onClick={() =>setActiveTopic(topic.id)}
         style={{
           backgroundColor: activeTopic === topic.id ? '#f15a25' : '',
           color: activeTopic === topic.id ? '#ffffff' : ''
@@ -32,16 +36,18 @@ const Blog = () => {
         ))}
       </div>
         {blogs
-          .filter((blog) => !activeTopic || blog.topic === activeTopic)
+          .filter((blog) => activeTopic === "all" || blog.topic === activeTopic)
           .map((blog) => (
             <div className="featured-blog">
                     <h1 className="featured-blog-title">{blog.title}</h1>
         <p className="featured-blog-date">{blog.date}</p>
         <p className="featured-blog-description">{blog.description}</p>
-        <p className="read-more-button">Read more</p>
+        <Link style={{cursor: 'none'}} to={`/blog/${blog.id}`}><p className="read-more-button">Read more</p></Link>
             </div>
           ))
         }
+      </main>
+      <Footer />
   </div>
   );
 };
