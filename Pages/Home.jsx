@@ -1,4 +1,5 @@
 import  React from 'react';
+import { Link } from 'react-router-dom'
 import Navbar from '../Components/Navbar.jsx'
 import Footer from '../Components/Footer.jsx'
 import './Home.css'
@@ -27,7 +28,7 @@ const Home = () => {
       <div className="latest-articles">
         <h1 className="latest-articles-heading">Latest Articles</h1>
         <div className="blogpage-link-container">
-        <p className="blogpage-link">View all articles <img className="right-arrow" src={RightArrow} alt="arrow" /></p>
+        <Link to="/blog"><p className="blogpage-link">View all articles <img className="right-arrow" src={RightArrow} alt="arrow" /></p></Link>
         
         </div>
         <FeaturedBlog />
