@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 
-import Navbar from './Navbar.jsx';
-import Footer from './Footer.jsx';
-import { blogs } from './BlogData.jsx';
-import './FeaturedBlog.css'
+import Navbar from '../Components/Navbar.jsx';
+import Footer from '../Components/Footer.jsx';
+import { blogs } from '../Components/BlogData.jsx';
+import '../Components/FeaturedBlog.css'
 import './Blog.css';
 
 const Blog = () => {

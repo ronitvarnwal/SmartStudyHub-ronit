@@ -1,17 +1,31 @@
-## Running React on Replit
+# React Blog Template
 
-[React](https://reactjs.org/) is a popular JavaScript library for building user interfaces.
+A sleek and responsive **React.js Blog Template** ideal for developers, students, and creators who want to share content in a clean, organized layout. This template is file-based, requires no backend, and is perfect for showcasing articles, ideas, or tutorials.
 
-[Vite](https://vitejs.dev/) is a blazing fast frontend build tool that includes features like Hot Module Reloading (HMR), optimized builds, and TypeScript support out of the box.
+---
 
-Using the two in conjunction is one of the fastest ways to build a web app.
+## 🔥 Features
 
-### Getting Started
-- Hit run
-- Edit [App.jsx](#src/App.jsx) and watch it live update!
+- Built entirely with **React.js**
+- **Easy content management** via a simple JS file
+- Fully **responsive** for mobile, tablet, and desktop
+- Clean folder structure and components
+- Quick to deploy and customize
 
-By default, Replit runs the `dev` script, but you can configure it by changing the `run` field in the [configuration file](#.replit). Here are the vite docs for [serving production websites](https://vitejs.dev/guide/build.html)
+---
 
-### Typescript
+## 🌐 Live Demo
 
-Just rename any file from `.jsx` to `.tsx`. You can also try our [TypeScript Template](https://replit.com/@replit/React-TypeScript)
+> [Click here to view the demo](https://smart-study-hub-ronit-seb6.vercel.app)
+
+---
+
+## 🛠️ Installation
+
+1. **Unzip** the folder
+2. Open it in your code editor
+3. Run the following in your terminal:
+
+```bash
+npm install
+npm start

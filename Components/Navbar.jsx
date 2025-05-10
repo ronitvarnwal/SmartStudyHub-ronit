@@ -3,10 +3,10 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-import LogoIcon from '../logo.svg';
-import MenuIcon from '../menu.svg';
-import TextLogo from '../textlogo.svg';
-import SearchIcon from '../searchicon.svg';
+import LogoIcon from '../Images/logo.svg';
+import MenuIcon from '../Images/menu.svg';
+import TextLogo from '../Images/textlogo.svg';
+import SearchIcon from '../Images/searchicon.svg';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);

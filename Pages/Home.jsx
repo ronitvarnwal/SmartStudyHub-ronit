@@ -1,13 +1,13 @@
 import  React from 'react';
-import Navbar from './Navbar.jsx'
-import Footer from './Footer.jsx'
+import Navbar from '../Components/Navbar.jsx'
+import Footer from '../Components/Footer.jsx'
 import './Home.css'
-import RightArrow from '../right-arrow.svg';
-import BookIcon from '../book-icon.svg'
-import ClockIcon from '../clock.svg';
-import NotesIcon from '../notes.svg';
-import IdeaIcon from '../idea.svg';
-import FeaturedBlog from './FeaturedBlog.jsx';
+import RightArrow from '../Images/right-arrow.svg';
+import BookIcon from '../Images/book-icon.svg'
+import ClockIcon from '../Images/clock.svg';
+import NotesIcon from '../Images/notes.svg';
+import IdeaIcon from '../Images/idea.svg';
+import FeaturedBlog from '../Components/FeaturedBlog.jsx';
 
 
 const Home = () => {
