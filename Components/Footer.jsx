@@ -17,7 +17,7 @@ const Footer = () => {
     navigate(`/blog?topic=${topicId}`)
   }
   return (
-    <div>
+    <>
       <div className="footer-container">
         <div className="footer-branding">
           <div>
@@ -52,7 +52,7 @@ const Footer = () => {
         </ul>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

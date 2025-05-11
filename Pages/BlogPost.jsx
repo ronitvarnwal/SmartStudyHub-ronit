@@ -29,7 +29,7 @@ const BlogPost = () => {
   const { title, date, topic, content, description, keywords, image } = blog;
 
   return (
-    <div>
+    <>
       <Helmet>
         {/* Basic SEO */}
         <title>{title} | SmartStudy Blog</title>
@@ -78,7 +78,7 @@ const BlogPost = () => {
         </div>
       </div>
       <Footer />
-    </div>
+    </>
   );
 };
 

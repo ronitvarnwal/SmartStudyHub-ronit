@@ -46,7 +46,7 @@ const Home = () => {
     navigate(`/blog?topic=${topicId}`);
   }
   return (
-    <div>
+    <>
       <Helmet>
         <title>SmartStudyHub | Unlock Your Full Learning Potential</title>
         <meta name="description" content="Discover proven strategies to enhance your learning experience, boost productivity, and achieve academic excellence with our expert tips and guidance." />
@@ -90,7 +90,7 @@ const Home = () => {
         <div className="last-topic-space"></div>
       </div>
       <Footer />
-    </div>
+    </>
   );
 };
 

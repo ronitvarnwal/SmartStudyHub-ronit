@@ -20,7 +20,7 @@ const Blog = () => {
     { id: "tools", label: "Digital Tools" }
   ];
   return (
-    <div>
+    <>
       <Navbar />
       <main>
       <div className="topic-buttons">
@@ -50,7 +50,7 @@ const Blog = () => {
         }
       </main>
       <Footer />
-  </div>
+  </>
   );
 };
 

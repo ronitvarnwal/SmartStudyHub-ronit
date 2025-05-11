@@ -27,6 +27,7 @@ const Navbar = () => {
   }
 
   return (
+    <>
     <nav className={`navbar ${scrolled ? 'scrolled' : ''} ${isMenuOpen ? 'menu-open': ''}`}>
   <div className="navbar-top">
     <Link to="/" style={{ cursor: 'default' }}>
@@ -50,6 +51,7 @@ const Navbar = () => {
     </ul>
   )}
 </nav>
+    </>
   );
 };
 
