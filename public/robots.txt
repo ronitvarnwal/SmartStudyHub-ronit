@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://smart-study-hub-ronit.vercel.app/sitemap.xml
