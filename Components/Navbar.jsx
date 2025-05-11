@@ -42,12 +42,12 @@ const Navbar = () => {
     </div>
   </div>
   {isMenuOpen &&(
-    <div className="menu-content">
-      <Link to="/" style={{textDecoration: 'none', color: '#525252'}}><div>Home</div></Link>
-      <Link to="/" style={{textDecoration: 'none', color: '#525252'}}><div>About</div></Link>
-      <Link to="/blog" style={{textDecoration: 'none', color: '#525252'}}><div>Articles</div></Link>
-      <Link to="/blog" style={{textDecoration: 'none', color: '#525252'}}><div>Topics</div></Link>
-    </div>
+    <ul className="menu-content">
+      <li><Link to="/" style={{textDecoration: 'none', color: '#525252'}}>Home</Link></li>
+      <li><Link to="/blog" style={{textDecoration: 'none', color: '#525252'}}>Articles</Link></li>
+      <li><Link to="/search" style={{textDecoration: 'none', color: '#525252'}}>Search</Link></li>
+      <li><Link to="/" style={{textDecoration: 'none', color: '#525252'}}>About</Link></li>
+    </ul>
   )}
 </nav>
   );
