@@ -1,11 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Logo from '../Images/logo.svg';
 import TextLogo from '../Images/textlogo.svg'
 import './Footer.css';
 
 
 const Footer = () => {
+  const topics = [
+    { topicId: "study", label: "Study Techniques" },
+    { topicId: "time", label: "Time Management" },
+    { topicId: "note", label: "Note-Taking" },
+    { topicId: "tools", label: "Digital Tools" }
+  ]
+  const navigate = useNavigate();
+  const handleTopicClick = (topicId) => {
+    navigate(`/blog?topic=${topicId}`)
+  }
   return (
     <div>
       <div className="footer-container">
@@ -28,10 +38,9 @@ const Footer = () => {
         <div className="footer-links">
         <h2>Popular Topics</h2>
         <ul>
-          <li>Study Techniques</li>
-          <li>Time Management</li>
-          <li>Note-Taking</li>
-          <li>Digital Tools</li>
+          {topics.map((topic) => (
+      <li key={topic.topicId} onClick={() => handleTopicClick(topic.topicId)}>{topic.label}</li>
+          ))}
         </ul>
       </div>
         <div className="footer-links">

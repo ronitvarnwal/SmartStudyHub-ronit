@@ -2,11 +2,16 @@
     background-color: #ffffff;
     padding: 30px 20px;
     border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.04) 3px 3px 3px;
-    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /*border: 1px solid #ccc;*/
     margin: 40px 20px;
     font-family: 'poppins', sans-serif;
     height: auto;
+}
+.featured-blog:hover{
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: 0.9s ease-in-out;
 }
 .featured-blog-title{
     font-weight: 600;

@@ -12,6 +12,10 @@
 
 .navbar.scrolled {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+            backdrop-filter: blur(10px); /* Blurs the background behind */
+            border: 1.7px solid rgba(255, 255, 255, 0.3);
+  transition: 0.05s ease-in-out;
 }
 
 .navbar-top {

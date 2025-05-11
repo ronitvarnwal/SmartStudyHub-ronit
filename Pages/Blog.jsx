@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 import Navbar from '../Components/Navbar.jsx';
 import Footer from '../Components/Footer.jsx';
-import { blogs } from '../Components/BlogData.jsx';
+import { blogs } from '../Data/BlogData.jsx';
 import '../Components/FeaturedBlog.css'
 import './Blog.css';
 
 const Blog = () => {
-  const [activeTopic, setActiveTopic] = useState("all");
+  const [searchPrams] = useSearchParams();
+  const initialTopic = searchPrams.get("topic") || "all";
+  const [activeTopic, setActiveTopic] = useState(initialTopic);
 
   const topics = [
     { id: "all", label: "All" },
@@ -16,7 +18,7 @@ const Blog = () => {
     { id: "time", label: "Time Management" },
     { id: "note", label: "Note-Taking" },
     { id: "tools", label: "Digital Tools" }
-  ]
+  ];
   return (
     <div>
       <Navbar />
@@ -38,7 +40,7 @@ const Blog = () => {
         {blogs
           .filter((blog) => activeTopic === "all" || blog.topic === activeTopic)
           .map((blog) => (
-            <div className="featured-blog">
+            <div key={blog.id} className="featured-blog">
                     <h1 className="featured-blog-title">{blog.title}</h1>
         <p className="featured-blog-date">{blog.date}</p>
         <p className="featured-blog-description">{blog.description}</p>

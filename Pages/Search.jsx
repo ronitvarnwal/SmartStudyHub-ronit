@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { blogs } from '../Components/BlogData.jsx';
+import { blogs } from '../Data/BlogData.jsx';
 import '../Components/FeaturedBlog.css';
 import './Search.css';
 
