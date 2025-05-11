@@ -52,7 +52,10 @@ const Home = () => {
         <meta name="description" content="Discover proven strategies to enhance your learning experience, boost productivity, and achieve academic excellence with our expert tips and guidance." />
         <meta name="keywords" content="how to study less and get more grades?, how to become a topper at study, study techniques, time management, note-taking, digital tools, learning strategies, academic success, productivity, study tips, study skills, learning tips, study methods" />
       </Helmet>
+      <header>
+    <nav>
       <Navbar />
+    </nav>
       <div className="intro">
         <h1 className="gradient-text">Unlock Your Full Learning Potential</h1>
         <p className="intro-desp">
@@ -64,15 +67,20 @@ const Home = () => {
           <button onClick={scrollToTopics} className="intro-button explore-topic-button">Explore Topics</button>
         </div>
       </div>
-      <div className="latest-articles">
+        </header>
+      <main className="latest-articles">
         <h1 className="latest-articles-heading">Latest Articles</h1>
         <div className="blogpage-link-container">
         <Link to="/blog"><p className="blogpage-link">View all articles <img className="right-arrow" src={RightArrow} alt="arrow" /></p></Link>
         
         </div>
-        <FeaturedBlog />
+        <article>         
+          <FeaturedBlog />
+        </article>
         <div className="latest-articles-space"></div>
-      </div>
+      </main>
+      
+     <article>
       <div className="topics-container">
         <div>
           <h1 ref={topicsRef} className="topics-heading">Explore Topics</h1>
@@ -89,7 +97,10 @@ const Home = () => {
         </div>
         <div className="last-topic-space"></div>
       </div>
-      <Footer />
+     </article>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 };

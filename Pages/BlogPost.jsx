@@ -66,18 +66,24 @@ const BlogPost = () => {
           })}
         </script>
       </Helmet>
-
-      <Navbar />
+    <header>
+       <nav>
+        <Navbar />
+       </nav>
       <div className="blog-container">
         <h1 className="blog-title">{title}</h1>
         <p className="blog-meta">{date}</p>
         <p className="blog-description">{description}</p>
+      <header/>
 
         <div className="blog-content">
           {content?.map(renderContentBlock)}
         </div>
       </div>
-      <Footer />
+    </header>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 };
