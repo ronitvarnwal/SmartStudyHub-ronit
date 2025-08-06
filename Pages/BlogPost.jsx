@@ -10,7 +10,7 @@ const renderContentBlock = (block, index) => {
   const { type, text } = block;
 
   const typeToElement = {
-    h1: <h2 key={index} className="blog-heading">{text}</h2>,
+    h2: <h2 key={index} className="blog-heading">{text}</h2>,
     p: <p key={index} className="blog-paragraph">{text}</p>,
   };
 
@@ -66,10 +66,8 @@ const BlogPost = () => {
           })}
         </script>
       </Helmet>
+      <Navbar />
     <header>
-       <nav>
-        <Navbar />
-       </nav>
       <div className="blog-container">
         <h1 className="blog-title">{title}</h1>
         <p className="blog-meta">{date}</p>

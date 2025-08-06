@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <>
-    <div className={`navbar ${scrolled ? 'scrolled' : ''} ${isMenuOpen ? 'menu-open': ''}`}>
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''} ${isMenuOpen ? 'menu-open': ''}`}>
   <div className="navbar-top">
     <Link to="/" style={{ cursor: 'default' }}>
     <div className={`logo-group ${isMenuOpen ? 'logo-edit' : ''}`}>
@@ -50,7 +50,7 @@ const Navbar = () => {
       <li><Link to="/" style={{textDecoration: 'none', color: '#525252'}}>About</Link></li>
     </ul>
   )}
-</div>
+</nav>
     </>
   );
 };

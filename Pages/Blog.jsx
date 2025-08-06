@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useSearchParams } from "react-router-dom";
-
+import { Helmet } from 'react-helmet-async';
 import Navbar from '../Components/Navbar.jsx';
 import Footer from '../Components/Footer.jsx';
 import { blogs } from '../Data/BlogData.jsx';
@@ -21,6 +21,11 @@ const Blog = () => {
   ];
   return (
     <>
+      <Helmet>
+        <title>SmartStudyHub blog | Explore Bolgs</title>
+        <meta name="description" content="Discover proven strategies to enhance your learning experience, boost productivity, and achieve academic excellence with our expert tips and guidance." />
+        <meta name="keywords" content="smart work boogs, how to study less and get more grades?, how to become a topper at study, study techniques, time management, note-taking, digital tools, learning strategies, academic success, productivity, study tips, study skills, learning tips, study methods" />
+      </Helmet>
       <Navbar />
       <main>
       <div className="topic-buttons">
